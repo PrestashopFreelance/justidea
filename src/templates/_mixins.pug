@@ -1,0 +1,23 @@
+
+//- ================================= basic ======================================
+
+
+mixin metahead
+    meta(name="format-detection" content="telephone=no")
+    meta(name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
+//- mixin svg(name)
+//-     svg(class=`${name}`)
+//-         use(href=`./assets/img/sprite-inline.svg#${name}`)
+
+mixin icon(name,mod)
+    - mod = mod || ''
+    svg(class="icon icon-" + name + ' ' + mod)
+        use(xlink:href="./img/icons/icons.svg#" + name)
+
+//- +icon('arr_round','red_mod')
+
+//- ================================= basic ======================================
+
+
+//- === /footer ===
+

@@ -1,0 +1,126 @@
+.services {
+    margin:85px 0 270px;
+
+    p {
+		margin: 0 0 30px;
+		text-align: center;
+        font-size: 16px;
+        color: $color_5;
+    }
+.circle-wrapper {
+    width:600px;
+    height:600px;
+    border-radius:50%;
+    background:  center  no-repeat url("../img/mech.png");
+    position:relative;
+    margin:150px auto;
+    border: 1px solid #d4dbe0;
+    &__title {
+        position: absolute;
+        font-family: $font-bold;
+        text-transform: uppercase;
+        top: 49%;
+        left: 33%;
+        color: $white;
+        font-size: 14px;
+    }
+ }
+ 
+ .item {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -40px;
+    align-items: center;
+    opacity: 0;
+    
+    &--left {
+        flex-direction: row-reverse;
+        p {
+            right:80px;
+        }
+    }
+    &--right {
+        p {
+            left:80px;
+        }
+    }
+    &--bottom {
+        flex-direction: column;
+        p {
+            top:80px;
+        }
+    }
+    &--top {
+        flex-direction: column-reverse;
+        p {
+            bottom:80px;
+        }
+    }
+    .circle {
+        background: #f4f7f9;
+        border: 2px solid #d4dbe0;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    p {
+        position: absolute;
+        margin-bottom: 0;
+        padding: 15px;
+        text-align: unset;
+        white-space: nowrap; 
+        font-family: $font-header;
+        font-size: 16px;
+        color: $color_4;
+        opacity: 1;
+
+    }
+ }
+ .fade-in {
+    opacity:1;
+    transition: all 1s ease-in-out;
+    }
+}
+
+@media (max-width: 767px) {
+    
+    .services {
+        margin:60px 0 60px;
+        .webp .circle-wrapper {
+                background:  none;  
+            }
+        
+        .circle-wrapper {
+            width:100%;
+            height:auto;
+            border-radius:0;
+            background:  none !important;
+            position:relative;
+            margin:0 auto;
+            border: none;
+            p.title {
+             display: none;
+            }
+        }
+        .item {
+            opacity: 1;
+            position: unset; 
+            margin: 15px 0;
+            p {
+                position: unset; 
+                white-space: unset;
+                width: calc(100% - 80px);
+            }
+        }
+    }
+}

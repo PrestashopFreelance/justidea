@@ -1,0 +1,35 @@
+.newsletter
+  .__container
+    h2.title.title--white Skontaktuj się z nami
+    p.newsletter__subtitle
+        | Zadzwoń 
+        a(href="tel:+48 535 015 835") +48 535 015 835
+        |  lub wypełnij formularz.
+   
+    form#form-3.newsletter__form
+      input.visuallyhidden(name='product' type='hidden' value='Услуги')
+      input.newsletter__input(type='text' name='name' placeholder="Imię i Nazwisko" required)
+      input.newsletter__input(type='phone' name='phone' placeholder='Telefon' required)
+      input.newsletter__input(type='email' name='email' placeholder='E-mail' required)
+      input.newsletter__input(type='text' name='firma' placeholder="Firma" required)
+      select.newsletter__input(type='email' name='email' placeholder='Ilość pracowników')
+        option(value) Ilość pracowników
+        option(value=1) #{'<10'}
+        option(value=2) #{'>20'}
+        option(value=3) #{">50"}
+        option(value=4) #{">100"}
+      select.newsletter__input(type='email' name='email' placeholder='Roczny dochód firmy')
+        option(value) Roczny dochód firmy
+        option(value=1) #{"do 500 000 zl"}
+        option(value=2) #{"do 1 000 000 zl"}
+        option(value=3) #{"do 1 500 000 zl"}
+        option(value=4) #{"do 5 000 000 zl"}
+      textarea.newsletter__input.newsletter__input--textarea(name="" rows="8" placeholder="Describe yourself here...") 
+      .newsletter__checkbox
+        input(type="checkbox" required) 
+        .label
+          | Zapozanałem(-łam) się z  
+          a(href="tel:+48 535 015 835")  Polityką prywatności  
+          | oraz z 
+          a(href="tel:+48 535 015 835")  Zastrzeżeniami prawnymi
+      button.newsletter__btn.btn--main(type='submit') Wyślij

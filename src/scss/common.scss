@@ -1,0 +1,29 @@
+// Заголовки, общие БЄМ блоки и проче...
+$white: #fff;
+$color_2: #363e66;
+$color_3: #35a8e0;
+$color_4: #2f2f2f;
+$color_5: #565e66;
+$color_6: #a6a6c0;
+$font-bold: "Roboto-Bold",sans-serif;
+$font-regular: "Roboto-Regular",sans-serif;
+$font-header: "Hind-SemiBold",sans-serif;
+
+.title {
+    font-family: $font-header;
+    text-align: center; 
+    font-size: 36px;
+    color: $color_4;
+    margin: 25px 0;
+    &--white {
+        color: $white;
+    }
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("../img/arrow-down.svg") white no-repeat calc(100% - 10px) !important;
+  }
+  /*For IE*/
+  select::-ms-expand { display: none; }
